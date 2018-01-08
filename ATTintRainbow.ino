@@ -1,7 +1,10 @@
 #include <Adafruit_NeoPixel.h>
+#ifdef __AVR__
+  #include <avr/power.h>
+#endif
 
-#define PIN 4
-#define NEONUM 12
+#define PIN 4     // This is pin number P4 on the Digispark
+#define NEONUM 12  // The number of Neopixels
 
 // Parameter 1 = number of pixels in strip
 // Parameter 2 = Arduino pin number (most are valid)
